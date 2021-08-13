@@ -1,8 +1,7 @@
-# 📌SSH-PLUS-MANAGER
+# 📌SSH-PLUS-MANAGER BY Danuara
 
-* Updated 08/13/2021 - සම්පූර්ණ කරන ලද ව්‍යාපෘතිය
+* Updated 08/13/2021 - Completed Project (සම්පූර්ණ කරන ලද ව්‍යාපෘතිය)
 
-* UPDATE 11/05/2021 - Completed Project
 
 # 🌐Language
 
