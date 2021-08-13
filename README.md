@@ -1,4 +1,4 @@
-# 📌DARKSSH MANAGER
+# 📌SSH-PLUS-MANAGER
 
 * යාවත්කාලීන කිරීම 11/05/2021 - සම්පූර්ණ කරන ලද ව්‍යාපෘතිය
 
@@ -21,7 +21,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/sb
 
 ```
 
-# 🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥
+# 🔥😍 Danura Santhush 🇱🇰 😍🔥
 
 -------------------------------------------------------------------------------
 
@@ -78,7 +78,7 @@ SCRIPT DARKSSH MANAGER යනු සුදුසු අංග සහ මෙව�
 
 # 🏃‍contact me
 
-3. [🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥](https://t.me/sibatrow) 
+3. [🔥😍 Danura Santhush 🇱🇰 😍🔥](https://t.me/sibatrow) 
 
 ```
 * NO MINING!
@@ -89,7 +89,7 @@ SCRIPT DARKSSH MANAGER යනු සුදුසු අංග සහ මෙව�
 ```
 
 ```
-☆ [🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥](https://t.me/sibatrow) ☆
+☆ [🔥😍 Danura Santhush 🇱🇰 😍🔥](https://t.me/sibatrow) ☆
 ```
 
 [![License](https://www.gnu.org/graphics/gplv3-or-later.png)](LICENSE)
