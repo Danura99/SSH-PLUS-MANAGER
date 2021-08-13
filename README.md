@@ -17,7 +17,7 @@
 ## :book: Installation
 ```
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/sbatrow/DARKSSH-MANAGER/master/Plus; chmod 777 Plus; ./Plus
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Danura99/SSH-PLUS-MANAGER/master/Plus; chmod 777 Plus; ./Plus
 
 ```
 
