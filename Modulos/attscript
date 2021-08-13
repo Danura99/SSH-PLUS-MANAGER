@@ -70,7 +70,7 @@ fun_atts () {
 
 } > /dev/null 2>&1
 
-echo -e "                              \033[1;31mBy 🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥\033[1;36m"
+echo -e "                              \033[1;31mBy 🔥😍 Danura Santhush 🇱🇰 😍🔥\033[1;36m"
 
 echo -e "   DARKSSH" | figlet
 
@@ -102,7 +102,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
   rm /tmp/att > /dev/null 2>&1
 
-  echo -e " \033[1;33m MORE INFORMATION (වැඩි විස්තර) \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@sibatrow\n"
+  echo -e " \033[1;33m MORE INFORMATION (වැඩි විස්තර) \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@danu_359\n"
 
   echo -ne " \033[1;31m ENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
 
@@ -112,7 +112,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
   echo -e "  \033[1;36mTHERE IS A NEW UPDATE AVAILABLE!\033[1;33m\n"
 
-  echo -e "  \033[1;33mMORE INFORMATION (වැඩි විස්තර) \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@sibatrow\n"
+  echo -e "  \033[1;33mMORE INFORMATION (වැඩි විස්තර) \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@danu_359\n"
 
   echo -e "  \033[1;32mUPDATE DETAILS:\033[0m\n"
 

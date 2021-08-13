@@ -212,7 +212,7 @@ fun_edithost() {
 tput setaf 7;tput setab 4;tput bold;printf '%30s%s%-15s\n' "Create SSH User";tput sgr0
 echo ""
 echo "===================================================="
-echo -e "\033[0;34m  #BY:      🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥         \E[0m"
+echo -e "\033[0;34m  #BY:      🔥😍 Danura Santhush 🇱🇰 😍🔥         \E[0m"
 echo "===================================================="
 echo ""
 echo -ne "\033[1;32mUsername:\033[1;37m ";read username
@@ -306,7 +306,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		echo ""
                 echo -e "\033[1;32m♻️Paid Privet SSH ♻️"
                 echo ""
-                echo -e "\033[1;32m🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥"
+                echo -e "\033[1;32m🔥😍 Danura Santhush 🇱🇰 😍🔥"
                 echo -e "\033[1;32m======================"
                 echo -e "\033[1;32m=❌NO SPAM"
                 echo -e "\033[1;32m=❌NO DDOS "
@@ -330,7 +330,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32m [-] ═───────◇───────═"
                 echo -e "\033[1;32m࿂ Badvpn •  7300"
                 echo -e "\033[1;32m [-] ═───────◇───────═"
-                echo -e "\033[1;32m›☬[•] SCRIPTS ═◇ DARKSSH ◇═ [•]☬"
+                echo -e "\033[1;32m›☬[•] SCRIPTS ═◇ SSH-PLUS-MANAGER ◇═ [•]☬"
 		sleep 1
 		function aguarde() {
 			helice() {
@@ -369,7 +369,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		echo ""
 		echo -e "\033[1;32m♻️Paid Privet SSH ♻️"
                 echo ""
-                echo -e "\033[1;32m🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥"
+                echo -e "\033[1;32m🔥😍 Danura Santhush 🇱🇰 😍🔥"
                 echo -e "\033[1;32m======================"
                 echo -e "\033[1;32m=❌NO SPAM"
                 echo -e "\033[1;32m=❌NO DDOS "
@@ -393,7 +393,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32m [-] ═───────◇───────═"
                 echo -e "\033[1;32m࿂ Badvpn •  7300"
                 echo -e "\033[1;32m [-] ═───────◇───────═"
-                echo -e "\033[1;32m›☬[•] SCRIPTS ═◇ DARKSSH ◇═ [•]☬"
+                echo -e "\033[1;32m›☬[•] SCRIPTS ═◇ SSH-PLUS-MANAGER ◇═ [•]☬"
 		
 	}
 } || {
@@ -402,7 +402,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 	echo ""
 	echo -e "\033[1;32m♻️Paid Privet SSH ♻️"
         echo ""
-        echo -e "\033[1;32m🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥"
+        echo -e "\033[1;32m🔥😍 Danura Santhush 🇱🇰 😍🔥"
         echo -e "\033[1;32m======================"
         echo -e "\033[1;32m=❌NO SPAM"
         echo -e "\033[1;32m=❌NO DDOS "
@@ -426,6 +426,6 @@ echo "$username $sshlimiter" >>/root/usuarios.db
         echo -e "\033[1;32m [-] ═───────◇───────═"
         echo -e "\033[1;32m࿂ Badvpn •  7300"
         echo -e "\033[1;32m [-] ═───────◇───────═"
-        echo -e "\033[1;32m›☬[•] SCRIPTS ═◇ DARKSSH ◇═ [•]☬"
+        echo -e "\033[1;32m›☬[•] SCRIPTS ═◇ SSH-PLUS-MANAGER ◇═ [•]☬"
 	
 }
