@@ -25,13 +25,13 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 
 -------------------------------------------------------------------------------
 
-![logo](https://github.com/sbatrow/DARKSSH-MANAGER/blob/main/image/DARKSSH.jpg)
+![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/SSH-PLUS-MANAGER.png)
 
 [![Size](https://img.shields.io/github/repo-size/sbatrow/DARKSSH-MANAGER?style=flat-square&color=green)](https://github.com/Danura99/SSH-PLUS-MANAGER)   
 [![Python](https://img.shields.io/badge/Python-v3.9-blue)](https://www.python.org/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Danura99/SSH-PLUS-MANAGER/graphs/commit-activity)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Danura99/SSH-PLUS-MANAGER)   
-[![Contributors](https://img.shields.io/github/contributors/TeamUltroid/Ultroid?style=flat-square&color=green)](https://github.com/sbatrow/DARKSS-HMANAGER/graphs/contributors)        
+[![Contributors](https://img.shields.io/github/contributors/TeamUltroid/Ultroid?style=flat-square&color=green)]()        
 [![License](https://img.shields.io/badge/License-GPL-blue)](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/LICENSE)
 
 
@@ -45,9 +45,9 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
                  
                                                           
                    @ Auto genarate                                                                                  @ Banner
-<img align="right" src="https://github.com/sbatrow/DARKSSH-MANAGER/blob/main/image/banner.jpg" width='300'/>
+<img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/BANER.png" width='300'/>
   
-![logo](https://github.com/sbatrow/DARKSSH-MANAGER/blob/main/image/outo.jpg)                 
+![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/CREATE-USER.png)                 
          
 **Manager Script**
 
