@@ -178,8 +178,8 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[41;1;37m               ♻️ DARKSSH MANAGER ♻️              \E[0m"
-echo -e "\033[0;34m  #BY:      🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥         \E[0m"
+echo -e "\E[41;1;37m               ♻️ SSH-PLUS-MANAGER ♻️              \E[0m"
+echo -e "\033[0;34m  #BY:      🔥😍 Danura Santhush 🇱🇰 😍🔥         \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;32mSISTEMA            RAM MEMORY       PROCESSOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNuclei: \033[1;37m$_core\033[0m"
@@ -193,7 +193,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
     var01="\033[1;32m!"
 }
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\033[0;34m  #BY:      🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥       \033[0m"
+echo -e "\033[0;34m  #BY:      🔥😍 Danura Santhush 🇱🇰 😍🔥       \033[0m"
 echo ""
 echo -e "\033[1;31m[\033[1;36m20\033[1;31m] \033[1;37m• \033[1;33mADD HOST \033[1;31m [\033[1;36m26\033[1;31m] \033[1;37m• \033[1;33mCHANGE ROOT PASSWORD \033[1;31m
 [\033[1;36m21\033[1;31m] \033[1;37m• \033[1;33mREMOVER HOST \033[1;31m         [\033[1;36m27\033[1;31m] \033[1;37m• \033[1;33mAUTO EXECUTION $autm \033[1;31m
@@ -295,7 +295,7 @@ clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[41;1;37m               ♻️ SSH-PLUS-MANAGER ♻️              \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\033[0;34m  #BY:      🔥⚡️⚡️ Danura Santhush 🇱🇰 ⚡️⚡️🔥       \033[0m"
+echo -e "\033[0;34m  #BY:      🔥😍 Danura Santhush 🇱🇰 😍🔥       \033[0m"
 echo -e "\033[0;34m                     SRI LANKA                   \033[0m"
 echo -e "\033[0;34m Telegram- @danu_359//                           \033[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
