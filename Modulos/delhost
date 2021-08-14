@@ -12,7 +12,7 @@ then
 else
 	tput setaf 2 ; tput bold ; echo ""; echo "Domínios atuais no arquivo $payload:" ; tput sgr0
 	tput setaf 3 ; tput bold ; echo "" ; cat $payload ; echo "" ; tput sgr0
-	read -p "Digite o domínio que deseja remover da lista: " host
+	read -p "Enter the domain you want to remove from the list: " host
 	if [[ -z $host ]]
 		then
 			tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou um domínio vazio ou não existente!" ; echo "" ; tput sgr0
