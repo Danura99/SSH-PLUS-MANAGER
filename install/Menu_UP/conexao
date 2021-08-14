@@ -713,7 +713,7 @@
 					;;
 				2)
 					echo ""
-					echo -ne "\033[1;32mDESEJA REMOVER O OPENVPN \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
+					echo -ne "\033[1;32mWANT TO REMOVE OPENVPN \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
 					read REMOVE
 					[[ "$REMOVE" = 's' ]] && {
 						rmv_open() {
@@ -951,7 +951,7 @@
 							echo -e "\033[1;33m[\033[1;31m$i\033[1;33m] \033[1;37m- \033[1;32m$_host\033[0m"
 						done
 						echo ""
-						echo -ne "\033[1;32mSelecione o host a ser removido \033[1;33m[\033[1;37m1\033[1;31m-\033[1;37m$i\033[1;33m]\033[1;37m: "
+						echo -ne "\033[1;32mo host a ser removido \033[1;33m[\033[1;37m1\033[1;31m-\033[1;37m$i\033[1;33m]\033[1;37m: "
 						read option
 						if [[ -z $option ]]; then
 							echo ""
@@ -1580,7 +1580,7 @@ exit 0' >$RCLOCAL
 			echo -e "\E[41;1;37m         REMOVER PORTA DO SSH         \E[0m"
 			echo -e "\n\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mPORTA PADRAO \033[1;37m22 \033[1;33mCUIDADO !\033[0m"
 			echo -e "\n\033[1;33mPORTAS EM USO: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)\n"
-			echo -ne "\033[1;32mQUAL PORTA DESEJA REMOVER \033[1;33m?\033[1;37m "
+			echo -ne "\033[1;32mWHICH PORT DO YOU WANT TO REMOVE \033[1;33m?\033[1;37m "
 			read pt
 			[[ -z "$pt" ]] && {
 				echo -e "\n\033[1;31mPorta invalida!"
@@ -1645,7 +1645,7 @@ exit 0' >$RCLOCAL
 		} || {
 			clear
 			echo -e "\E[41;1;37m             REMOVER O SSLH               \E[0m\n"
-			echo -ne "\033[1;32mREALMENTE DESEJA REMOVER O SSLH \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
+			echo -ne "\033[1;32mREALLY WANT TO REMOVE SSLH \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
 			read respo
 			[[ "$respo" = "s" ]] && {
 				fun_delsslh() {

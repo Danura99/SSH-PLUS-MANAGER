@@ -23,9 +23,9 @@ fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>SEJA BEM VINDO(a) AO BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW !</i>\n\n"
+        env_msg+="⚠️ <i>SELECIONE UMA OPCAO ABAIXO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
             --parse_mode html
@@ -33,32 +33,32 @@ fun_menu() {
     }
     [[ -d /etc/bot/suspensos/${message_from_username} ]] && {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "🚫 YOU ARE SUSPENDED 🚫\n\nCONTACT THE ADMINISTRATOR")"
+            --text "$(echo -e "🚫 VC ESTA SUSPENSO 🚫\n\nCONTATE O ADMINISTRADOR")"
         return 0
     }
-    if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'resale')" != '0' ]]; then
+    if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>SEJA BEM VINDO(a) AO BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW !</i>\n\n"
+        env_msg+="⚠️ <i>SELECIONE UMA OPCAO ABAIXO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard2" \
             --parse_mode html
         return 0
-    elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'sub-resale')" != '0' ]]; then
+    elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>SEJA BEM VINDO(a) AO BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW !</i>\n\n"
+        env_msg+="⚠️ <i>SELECIONE UMA OPCAO ABAIXO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard3" \
             --parse_mode html
         return 0
     else
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e 🚫 ACCESS DENIED 🚫)"
+            --text "$(echo -e 🚫 ACESSO NEGADO 🚫)"
         return 0
     fi
 }
@@ -74,61 +74,61 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>BEM VINDO(a) AO BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>Available Commands</i>\n\n"
-        env_msg+="[<b>01</b>] /menu = Display menu\n"
-        env_msg+="[<b>02</b>] /info = Display information\n"
-        env_msg+="[<b>03</b>] /help = Information about options\n\n"
-        env_msg+="⚠️ <i>Available Options</i>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create user ssh\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVER</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display users online\n\n"
-        env_msg+="• <u>INFO VPS</u> = server information\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change data ssh\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove ssh expired\n\n"
-        env_msg+="• <u>BACKUP</u> = Create ssh backup and resellers\n\n"
-        env_msg+="• <u>OPTIMIZE</u> = Clear cache - ram\n\n"
-        env_msg+="• <u>SPEED-TESTE</u> = connection test\n\n"
-        env_msg+="• <u>FILES</u> = Hosts Files\n\n"
-        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
-        env_msg+="• <u>AUTOBACKUP</u> = lig / Automatic Backup\n\n"
-        env_msg+="• <u>REPORT</u> = Reseller Information\n\n"
-        env_msg+="• <u>HELP</u> = Information about options\n\n"
+        env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
+        env_msg+="[<b>01</b>] /menu = Exibe menu\n"
+        env_msg+="[<b>02</b>] /info = Exibe informacoes\n"
+        env_msg+="[<b>03</b>] /ajuda = Informacoes sobre opcoes\n\n"
+        env_msg+="⚠️ <i>Opções Disponiveis</i>\n\n"
+        env_msg+="• <u>CRIAR USUARIO</u> = Cria usuario ssh\n\n"
+        env_msg+="• <u>CRIAR TESTE</u> = Cria teste ssh\n\n"
+        env_msg+="• <u>REMOVER</u> = Remove usuario ssh\n\n"
+        env_msg+="• <u>INFO USUARIOS</u> = Informacoes do usuario\n\n"
+        env_msg+="• <u>USUARIOS ONLINE</u> = Exibe Usuários onlines\n\n"
+        env_msg+="• <u>INFO VPS</u> = Informacoes do servidor\n\n"
+        env_msg+="• <u>ALTERAR SENHA</u> = Altera senha ssh\n\n"
+        env_msg+="• <u>ALTERAR LIMITE</u> = Altera limite ssh\n\n"
+        env_msg+="• <u>ALTERAR DATA</u> = Altera data ssh\n\n"
+        env_msg+="• <u>EXPIRADOS</u> = Remove ssh expirados\n\n"
+        env_msg+="• <u>BACKUP</u> = Cria Backup ssh e revendas\n\n"
+        env_msg+="• <u>OTIMIZAR</u> = Limpa o cache - ram\n\n"
+        env_msg+="• <u>SPEEDTESTE</u> = Teste de conexao\n\n"
+        env_msg+="• <u>ARQUIVOS</u> = Hospeda Arquivos\n\n"
+        env_msg+="• <u>REVENDAS</u> = Gerenciar Revendas\n\n"
+        env_msg+="• <u>AUTOBACKUP</u> = lig/Des Backup automatico\n\n"
+        env_msg+="• <u>RELATORIO</u> = Informacoes sobre revendas\n\n"
+        env_msg+="• <u>AJUDA</u> = Informacoes sobre opcoes\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
         return 0
     elif [[ -d /etc/bot/suspensos/$id_name ]]; then
         ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e "🚫 YOU ARE SUSPENDED 🚫\n\nCONTATE O ADMINISTRADOR")"
+            --text "$(echo -e "🚫 VC ESTA SUSPENSO 🚫\n\nCONTATE O ADMINISTRADOR")"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>BEM VINDO(a) AO BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>Available Commands</i>\n\n"
-        env_msg+="[<b>01</b>] /menu = Display menu\n"
-        env_msg+="[<b>02</b>] /info = Display information\n"
-        env_msg+="[<b>03</b>] /help = Information about options\n\n"
-        env_msg+="⚠️ <i>Available Options</i>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create user ssh\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVER</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display users online\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change data ssh\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove ssh expired\n\n"
-        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
-        env_msg+="• <u>REPORT</u> = Reseller Information\n\n"
-        env_msg+="• <u>HELP</u> = Information about options\n\n"
+        env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
+        env_msg+="[<b>01</b>] /menu = Exibe menu\n"
+        env_msg+="[<b>02</b>] /info = Exibe informacoes\n"
+        env_msg+="[<b>03</b>] /ajuda = Informacoes sobre opcoes\n\n"
+        env_msg+="⚠️ <i>Opções Disponiveis</i>\n\n"
+        env_msg+="• <u>CRIAR USUARIO</u> = Cria usuario ssh\n\n"
+        env_msg+="• <u>CRIAR TESTE</u> = Cria teste ssh\n\n"
+        env_msg+="• <u>REMOVER</u> = Remove usuario ssh\n\n"
+        env_msg+="• <u>INFO USUARIOS</u> = Informacoes do usuario\n\n"
+        env_msg+="• <u>USUARIOS ONLINE</u> = Exibe Usuários onlines\n\n"
+        env_msg+="• <u>ALTERAR SENHA</u> = Altera senha ssh\n\n"
+        env_msg+="• <u>ALTERAR LIMITE</u> = Altera limite ssh\n\n"
+        env_msg+="• <u>ALTERAR DATA</u> = Altera data ssh\n\n"
+        env_msg+="• <u>EXPIRADOS</u> = Remove ssh expirados\n\n"
+        env_msg+="• <u>REVENDAS</u> = Gerenciar Revendas\n\n"
+        env_msg+="• <u>RELATORIO</u> = Informacoes sobre revendas\n\n"
+        env_msg+="• <u>AJUDA</u> = Informacoes sobre opcoes\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -136,23 +136,23 @@ fun_ajuda() {
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>BEM VINDO(a) AO BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>Available Commands</i>\n\n"
-        env_msg+="[<b>01</b>] /menu = Display menu\n"
-        env_msg+="[<b>02</b>] /info = Display information\n"
-        env_msg+="[<b>03</b>] /help = Information about options\n\n"
-        env_msg+="⚠️ <i>Available Options</i>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create user ssh\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVER</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display users online\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change data ssh\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove ssh expired\n\n"
-        env_msg+="• <u>HELP</u> = Information about options\n\n"
+        env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
+        env_msg+="[<b>01</b>] /menu = Exibe menu\n"
+        env_msg+="[<b>02</b>] /info = Exibe informacoes\n"
+        env_msg+="[<b>03</b>] /ajuda = Informacoes sobre opcoes\n\n"
+        env_msg+="⚠️ <i>Opções Disponiveis</i>\n\n"
+        env_msg+="• <u>CRIAR USUARIO</u> = Cria usuario ssh\n\n"
+        env_msg+="• <u>CRIAR TESTE</u> = Cria teste ssh\n\n"
+        env_msg+="• <u>REMOVER</u> = Remove usuario ssh\n\n"
+        env_msg+="• <u>INFO USUARIOS</u> = Informacoes do usuario\n\n"
+        env_msg+="• <u>USUARIOS ONLINE</u> = Exibe Usuários onlines\n\n"
+        env_msg+="• <u>ALTERAR SENHA</u> = Altera senha ssh\n\n"
+        env_msg+="• <u>ALTERAR LIMITE</u> = Altera limite ssh\n\n"
+        env_msg+="• <u>ALTERAR DATA</u> = Altera data ssh\n\n"
+        env_msg+="• <u>EXPIRADOS</u> = Remove ssh expirados\n\n"
+        env_msg+="• <u>AJUDA</u> = Informacoes sobre opcoes\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
