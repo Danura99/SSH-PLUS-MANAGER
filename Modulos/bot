@@ -2063,7 +2063,7 @@ while :; do
                     fun_del_user ${message_text[$id]}
                     [[ "$_erro" == '1' ]] && break
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "✅ *Removido com sucesso.* 🚮" \
+                        --text "✅ *successfully removed.* 🚮" \
                         --parse_mode markdown
                     ;;
                 '🔐 Change Password 🔐\n\nUser name:')
