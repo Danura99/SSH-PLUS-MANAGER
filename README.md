@@ -25,6 +25,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 -------------------------------------------------------------------------------
 
 <img align="left" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/SSH-PLUS-MANAGER.png" />
+                                                                                           @ Banner
 <img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/telegram_BOT.png" />
 
 [![Size](https://img.shields.io/github/repo-size/sbatrow/DARKSSH-MANAGER?style=flat-square&color=green)](https://github.com/Danura99/SSH-PLUS-MANAGER)   
