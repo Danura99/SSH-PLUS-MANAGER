@@ -23,8 +23,8 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 # 🔥😍 Danura Santhush 🇱🇰 😍🔥
 
 -------------------------------------------------------------------------------
-
-![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/SSH-PLUS-MANAGER.png)
+<img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/SSH-PLUS-MANAGER.png" />
+![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/telegram_BOT.png)
 
 [![Size](https://img.shields.io/github/repo-size/sbatrow/DARKSSH-MANAGER?style=flat-square&color=green)](https://github.com/Danura99/SSH-PLUS-MANAGER)   
 [![Python](https://img.shields.io/badge/Python-v3.9-blue)](https://www.python.org/)
@@ -46,8 +46,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
                    @ Auto genarate                                                           @ Banner
 <img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/BANER.png" width='300'/>
   
-![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/CREATE-USER.png)       
-<img align="center" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/telegram_BOT.png"/>          
+![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/CREATE-USER.png)                
          
 **Manager Script**
 
