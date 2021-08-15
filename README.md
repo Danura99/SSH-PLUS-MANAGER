@@ -23,8 +23,9 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 # 🔥😍 Danura Santhush 🇱🇰 😍🔥
 
 -------------------------------------------------------------------------------
-<img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/SSH-PLUS-MANAGER.png" />
-![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/telegram_BOT.png)
+
+<img align="left" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/SSH-PLUS-MANAGER.png" />
+<img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/telegram_BOT.png" />
 
 [![Size](https://img.shields.io/github/repo-size/sbatrow/DARKSSH-MANAGER?style=flat-square&color=green)](https://github.com/Danura99/SSH-PLUS-MANAGER)   
 [![Python](https://img.shields.io/badge/Python-v3.9-blue)](https://www.python.org/)
