@@ -23,7 +23,8 @@ fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>WELCOME TO THE BOT SSH-PLUS-MANAGER</b>\n"
+        env_msg+="<b>😍POWERD BY DANURA😍</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -39,7 +40,8 @@ fun_menu() {
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'resale')" != '0' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>WELCOME TO THE BOT SSH-PLUS-MANAGER</b>\n"
+        env_msg+="<b>😍POWERD BY DANURA😍</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -49,7 +51,8 @@ fun_menu() {
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'sub-resale')" != '0' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>WELCOME TO THE BOT SSH-PLUS-MANAGER</b>\n"
+        env_msg+="<b>😍POWERD BY DANURA😍</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -74,7 +77,8 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>WELCOME TO THE BOT SSH-PLUS-MANAGER</b>\n"
+        env_msg+="<b>😍POWERD BY DANURA😍</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>Available Commands</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
@@ -110,7 +114,8 @@ fun_ajuda() {
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'resale' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>WELCOME TO THE BOT SSH-PLUS-MANAGER</b>\n"
+        env_msg+="<b>😍POWERD BY DANURA😍</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>Available Commands</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
@@ -136,7 +141,8 @@ fun_ajuda() {
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'sub-resale' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WELCOME(a) TO THE BOT SSHPLUS</b>\n"
+        env_msg+="<b>WELCOME TO THE BOT SSH-PLUS-MANAGER</b>\n"
+        env_msg+="<b>😍POWERD BY DANURA😍</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>Available Commands</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
