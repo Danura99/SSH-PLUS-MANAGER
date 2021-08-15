@@ -47,7 +47,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 <img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/BANER.png" width='300'/>
   
 ![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/CREATE-USER.png)       
-![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/CREATE-USER.png)          
+<img align="center" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/telegram_BOT.png"/>          
          
 **Manager Script**
 
