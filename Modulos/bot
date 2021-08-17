@@ -48,7 +48,7 @@ fun_menu() {
             --reply_markup "$keyboard2" \
             --parse_mode html
         return 0
-    elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'su-brevenda')" != '0' ]]; then
+    elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
         env_msg="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n"
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
@@ -1149,7 +1149,7 @@ relatorio_rev() {
             while read _sublist; do
                 _usub="$(echo $_sublist | awk '{print $2}')"
                 echo $(grep -wc $_usub $suspensos)
-            done <<<"$(grep -w 'SUBREVENDA' /etc/bot/revenda/${callback_query_from_username}/${callback_query_from_username})"
+            done <<<"$(grep -w 'SUPPORT' /etc/bot/revenda/${callback_query_from_username}/${callback_query_from_username})"
         }
         _cont_limite=$(grep -w ${callback_query_from_username} $ativos | awk '{print $4}')
         fun_verif_limite_rev ${callback_query_from_username}
@@ -1166,7 +1166,7 @@ relatorio_rev() {
         msg+="<b>Suspended Sub-Resellers:</b> $_cont_sup\n"
         msg+="<b>User:</b> @${callback_query_from_username}\n"
         msg+="<b>ID:</b> <code>${callback_query_from_id}</code>\n"
-        echo -e "LIST OF TWO SELLERS\n\nTotal: $_cont_atv  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=" >/tmp/Relatorio-${callback_query_from_username}.txt
+        echo -e "REPORT OF SUB RESELLERS\n\nTotal: $_cont_atv  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=" >/tmp/Relatorio-${callback_query_from_username}.txt
         while read _sublist; do
             _usub="$(echo $_sublist | awk '{print $2}')"
             _limit_sub=$(echo $_sublist | awk '{print $4}')
@@ -1343,7 +1343,7 @@ criar_rev() {
         t_rev='revenda'
     } || {
         t_rev='subrevenda'
-        echo -e "SUBREVENDA: $u_rev LIMITE_SUBREVENDA: $l_rev" >>/etc/bot/revenda/${message_from_username}/${message_from_username}
+        echo -e "SUPPORT: $u_rev LIMITE_SUBREVENDA: $l_rev" >>/etc/bot/revenda/${message_from_username}/${message_from_username}
     }
     mkdir /etc/bot/revenda/"$u_rev"
     mkdir /etc/bot/revenda/"$u_rev"/usuarios
@@ -1607,7 +1607,7 @@ fun_list_rev() {
     elif [[ "$(grep -w ${callback_query_from_username} $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         _patch="/etc/bot/revenda"
         local msg1
-        msg1="=×=×=×=×=×=×=×=×=×=×=×=×=\n📃 LIST OF SELLERS !\n=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg1="=×=×=×=×=×=×=×=×=×=×=×=×=\n📃 LIST OF RESELLERS !\n=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         [[ "$(grep -wc "SUBREVENDA" $_patch/${callback_query_from_username}/${callback_query_from_username})" != '0' ]] && {
             while read _listsub; do
                 _usub="$(echo $_listsub | awk '{print $2}')"
@@ -1620,7 +1620,7 @@ fun_list_rev() {
             return 0
         } || {
             ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-                --text "YOU DO NOT HAVE SUB RESELLERS"
+                --text "YOU DO NOT HAVE RESELLERS"
             return 0
         }
     else
