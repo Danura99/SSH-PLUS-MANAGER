@@ -37,7 +37,7 @@ fun_menu() {
             --text "$(echo -e "🚫 YOU ARE SUSPENDED 🚫\n\nCONTACT THE ADMINISTRATOR")"
         return 0
     }
-    if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'resale')" != '0' ]]; then
+    if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
         env_msg="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n"
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
@@ -48,7 +48,7 @@ fun_menu() {
             --reply_markup "$keyboard2" \
             --parse_mode html
         return 0
-    elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'sub-resale')" != '0' ]]; then
+    elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'su-brevenda')" != '0' ]]; then
         local env_msg
         env_msg="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n"
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
@@ -99,7 +99,7 @@ fun_ajuda() {
         env_msg+="• <u>OPTIMIZE</u> = Clear cache - ram\n\n"
         env_msg+="• <u>SPEED-TESTE</u> = connection test\n\n"
         env_msg+="• <u>FILES</u> = Hosts Files\n\n"
-        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
+        env_msg+="• <u>RESELLERS</u> = Manage Resellers\n\n"
         env_msg+="• <u>AUTOBACKUP</u> = lig / Automatic Backup\n\n"
         env_msg+="• <u>REPORT</u> = Reseller Information\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n"
@@ -111,7 +111,7 @@ fun_ajuda() {
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e "🚫 YOU ARE SUSPENDED 🚫\n\nCONTACT THE ADMINISTRATOR")"
         return 0
-    elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'resale' ]]; then
+    elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
         env_msg="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n"
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
@@ -131,14 +131,14 @@ fun_ajuda() {
         env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
         env_msg+="• <u>CHANGE DATE</u> = Change data ssh\n\n"
         env_msg+="• <u>EXPIRED</u> = Remove ssh expired\n\n"
-        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
+        env_msg+="• <u>RESELLERS</u> = Manage Resellers\n\n"
         env_msg+="• <u>REPORT</u> = Reseller Information\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
         return 0
-    elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'sub-resale' ]]; then
+    elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
         env_msg="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n"
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
@@ -365,7 +365,7 @@ alterar_limite_user() {
             _erro='1'
             return 0
         }
-        _limTotal=$(grep -w 'LIMIT_RESALE' /etc/bot/revenda/${message_from_username}/${message_from_username} | awk '{print $NF}')
+        _limTotal=$(grep -w 'LIMIT_REVENDA' /etc/bot/revenda/${message_from_username}/${message_from_username} | awk '{print $NF}')
         [[ "$limite" -gt "$_limTotal" ]] && {
             ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
                 --text "$(echo -e "❌ YOU DO NOT HAVE ENOUGH LIMIT ❌\n\nCurrent Limit: $_limTotal ")" \
@@ -1075,7 +1075,7 @@ relatorio_rev() {
         msg+="<b>Online users:</b> $_onli\n"
         msg+="<b>Active Resellers:</b> $_cont_rev\n"
         msg+="<b>Suspended Resellers:</b> $_cont_sus\n"
-        msg+="<b>Sub-Resales:</b> $_cont_sub\n\n"
+        msg+="<b>Sub-Resellers:</b> $_cont_sub\n\n"
         msg+="<b>User:</b> @${callback_query_from_username}\n"
         msg+="<b>ID:</b> <code>${callback_query_from_id}</code>\n"
         [[ $_cont_revt != '0' ]] && {
@@ -1162,8 +1162,8 @@ relatorio_rev() {
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         msg+="<b>Login Limit:</b> $_cont_limite\n"
         msg+="<b>Available Limit:</b> $_cont_disp\n"
-        msg+="<b>Total Sub-Resales:</b> $_cont_atv\n"
-        msg+="<b>Suspended Sub-Resales:</b> $_cont_sup\n"
+        msg+="<b>Total Sub-Resellers:</b> $_cont_atv\n"
+        msg+="<b>Suspended Sub-Resellers:</b> $_cont_sup\n"
         msg+="<b>User:</b> @${callback_query_from_username}\n"
         msg+="<b>ID:</b> <code>${callback_query_from_id}</code>\n"
         echo -e "LIST OF TWO SELLERS\n\nTotal: $_cont_atv  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=" >/tmp/Relatorio-${callback_query_from_username}.txt
@@ -1349,7 +1349,7 @@ criar_rev() {
     mkdir /etc/bot/revenda/"$u_rev"/usuarios
     touch /etc/bot/revenda/"$u_rev"/$u_rev
     echo -e "USER: $u_rev LIMITE: $l_rev DIAS: $d_rev TIPO: $t_rev" >>$ativos
-    echo -e "=========================\nLIMIT_RESALE: $l_rev\nDAYS_RESALE: $d_rev\n=========================\n" >/etc/bot/revenda/"$u_rev"/$u_rev
+    echo -e "=========================\nLIMITE_REVENDA: $l_rev\nDAYS_REVENDA: $d_rev\n=========================\n" >/etc/bot/revenda/"$u_rev"/$u_rev
     sed -i '$d' $file_rev
     echo -e "Vencimento: $(date "+%d/%m/%Y" -d "+$d_rev days")" >>$file_rev
 }
@@ -1667,7 +1667,7 @@ susp_rev() {
         return 0
     }
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
-        [[ "$(grep -wc 'SUBRESALE' /etc/bot/revenda/$_revs/$_revs)" != '0' ]] && {
+        [[ "$(grep -wc 'SUBREVENDA' /etc/bot/revenda/$_revs/$_revs)" != '0' ]] && {
             while read _listsub3; do
                 _usub3="$(echo $_listsub3 | awk '{print $2}')"
                 _dir_users="/etc/bot/revenda/$_usub3/usuarios"
@@ -1679,7 +1679,7 @@ susp_rev() {
                 }
                 mv /etc/bot/revenda/$_usub3 /etc/bot/suspensos/$_usub3
                 grep -w "$_usub3" $ativos >>$suspensos
-            done <<<"$(grep -w 'SUBRESALE' /etc/bot/revenda/$_revs/$_revs)"
+            done <<<"$(grep -w 'SUBREVENDA' /etc/bot/revenda/$_revs/$_revs)"
         }
         [[ "$(ls /etc/bot/revenda/$_revs/usuarios | wc -l)" != '0' ]] && {
             for _user_ in $(ls /etc/bot/revenda/$_revs/usuarios); do
@@ -1722,7 +1722,7 @@ infouserbot() {
         fun_verif_limite_rev ${message_from_username}
         _cont_disp=$(echo $_cont_limite - $_result | bc)
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "<b>NAME: </> ${message_from_first_name[$(ShellBot.ListUpdates)]}\n<b>USER:</>" "@${message_from_username[$(ShellBot.ListUpdates)]:-null}")\n<b>ID:</> ${message_from_id[$(ShellBot.ListUpdates)]}\nACCESS: RESALE\n<b>LIMIT TOTAL:</b> $_cont_limite\n<b>LIMIT REMAINING:</b> $_cont_disp" \
+            --text "$(echo -e "<b>NAME: </> ${message_from_first_name[$(ShellBot.ListUpdates)]}\n<b>USER:</>" "@${message_from_username[$(ShellBot.ListUpdates)]:-null}")\n<b>ID:</> ${message_from_id[$(ShellBot.ListUpdates)]}\nACCESS: REVENDA\n<b>LIMIT TOTAL:</b> $_cont_limite\n<b>LIMIT REMAINING:</b> $_cont_disp" \
             --parse_mode html
         return 0
     } || {
@@ -2365,7 +2365,7 @@ while :; do
                 '♾ CHANGE RESALE LIMIT ♾\n\nInform his user [Ex: @crazy_vpn]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
-                    echo -e "Dealer: ${message_text[$id]}" >$CAD_ARQ
+                    echo -e "Revendedor: ${message_text[$id]}" >$CAD_ARQ
                     _Var1=$(sed -n '1 p' $CAD_ARQ | awk -F '@' {'print $2'})
                     [[ -z $_Var1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
