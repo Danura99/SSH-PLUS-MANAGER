@@ -27,6 +27,8 @@ fun_menu() {
         env_msg+="<b>😍✦✫POWERD BY DANURA✫✦😍</b>\n"
         env_msg+="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
+        env_msg+="<b>/Telegram- @danu_359</b>\n"
+        env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
             --parse_mode html
@@ -44,6 +46,8 @@ fun_menu() {
         env_msg+="<b>😍✦✫POWERD BY DANURA✫✦😍</b>\n"
         env_msg+="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
+        env_msg+="<b>/Telegram- @danu_359</b>\n"
+        env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard2" \
             --parse_mode html
@@ -54,6 +58,8 @@ fun_menu() {
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
         env_msg+="<b>😍✦✫POWERD BY DANURA✫✦😍</b>\n"
         env_msg+="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n\n"
+        env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
+        env_msg+="<b>/Telegram- @danu_359</b>\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard3" \
@@ -80,6 +86,8 @@ fun_ajuda() {
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
         env_msg+="<b>😍✦✫POWERD BY DANURA✫✦😍</b>\n"
         env_msg+="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n\n"
+        env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
+        env_msg+="<b>/Telegram- @danu_359</b>\n"
         env_msg+="⚠️ <i>Available Commands</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -117,6 +125,8 @@ fun_ajuda() {
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
         env_msg+="<b>😍✦✫POWERD BY DANURA✫✦😍</b>\n"
         env_msg+="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n\n"
+        env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
+        env_msg+="<b>/Telegram- @danu_359</b>\n"
         env_msg+="⚠️ <i>Available Commands</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -144,6 +154,8 @@ fun_ajuda() {
         env_msg+="<b>🙏WELCOME SSH-PLUS-MANAGER🙏</b>\n"
         env_msg+="<b>😍✦✫POWERD BY DANURA✫✦😍</b>\n"
         env_msg+="   ✫   .  ˚  ✦  ·   ✫   .  ˚  ✦  ·\n\n"
+        env_msg+="⚠️ <i>SELECT AN OPTION BELOW 👇!</i>\n\n"
+        env_msg+="<b>/Telegram- @danu_359</b>\n"
         env_msg+="⚠️ <i>Available Commands</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -1267,9 +1279,9 @@ restaure_backup() {
 }
 msg_bem_vindo() {
     local msg
-    msg="✌️😃 Hello <b>${message_from_first_name[$id]}</b>\n\nwelcome(a)\n\n"
-    msg+="To access the menu\nclick ou execute [ /menu ]\n\n"
-    msg+="For information\nclick or run [ /ajuda ]\n\n"
+    msg="✌️😃 Hi <b>${message_from_first_name[$id]}</b>\n\nWELCOME(a)\n\n"
+    msg+="To access the menu\nclick or execute [ /menu ]\n\n"
+    msg+="For information\nclick or execute [ /ajuda ]\n\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --parse_mode html
@@ -1318,7 +1330,7 @@ fun_add_revenda() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "👥 ADD DEALER 👥\n\nEnter the name:" \
+            --text "👥 ADD RESELLER 👥\n\nEnter the name:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1349,7 +1361,7 @@ criar_rev() {
     mkdir /etc/bot/revenda/"$u_rev"/usuarios
     touch /etc/bot/revenda/"$u_rev"/$u_rev
     echo -e "USER: $u_rev LIMITE: $l_rev DIAS: $d_rev TIPO: $t_rev" >>$ativos
-    echo -e "=========================\nLIMITE_REVENDA: $l_rev\nDAYS_REVENDA: $d_rev\n=========================\n" >/etc/bot/revenda/"$u_rev"/$u_rev
+    echo -e "=========================\nLIMITE_REVENDA: $l_rev\nDIAS_REVENDA: $d_rev\n=========================\n" >/etc/bot/revenda/"$u_rev"/$u_rev
     sed -i '$d' $file_rev
     echo -e "Vencimento: $(date "+%d/%m/%Y" -d "+$d_rev days")" >>$file_rev
 }
@@ -1362,7 +1374,7 @@ fun_del_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🗑 REMOVE DEALER 🗑\n\nInform the user [Ex: @crazy_vpn]:" \
+            --text "🗑 REMOVE DEALER 🗑\n\nInform his user [Ex: @danu_359]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1424,7 +1436,7 @@ del_rev() {
             return 0
         } || {
             ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                --text "$(echo -e ❌  DEALER DOES NOT EXIST ❌)"
+                --text "$(echo -e ❌ DEALER DOES NOT EXIST ❌)"
             return 0
         }
     } || {
@@ -1480,7 +1492,7 @@ fun_lim_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "♾ CHANGE RESALE LIMIT ♾\n\nReport the user [Ex: @crazy_vpn]:" \
+            --text "♾CHANGE RESALE LIMIT ♾\n\nInform his user [Ex: @danu_359]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1526,7 +1538,7 @@ fun_dat_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "📆 CHANGE RESALE DATE 📆\n\nInform the user [Ex: @crazy_vpn]:" \
+            --text "📆 CHANGE RESALE DATE 📆\n\nInform his user [Ex: @danu_359]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1570,7 +1582,7 @@ dat_rev() {
         sed -i "/\b$_revd\b/d" $suspensos
         sed -i "s;$new_d;$(date "+%d/%m/%Y" -d "+$new_d days");" $_datfile
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "⚠️ $_revd IT WAS SUSPENDED AND WAS REACTIVATED !")" \
+            --text "$(echo -e "⚠️ $_revd WAS SUSPENDED AND WAS REACTIVATED !")" \
             --parse_mode html
     } || {
         d_old=$(grep -w 'DIAS_REVENDA' /etc/bot/revenda/$_revd/$_revd | awk {'print $2'})
@@ -1588,7 +1600,7 @@ fun_list_rev() {
     }
     if [[ "${callback_query_from_id[$id]}" == "$id_admin" ]]; then
         local msg1
-        msg1="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n📃RESELLERS LIST !\n=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg1="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n📃 LIST OF RESELLERS !\n=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         [[ "$(grep -wc 'revenda' $ativos)" != '0' ]] && {
             while read _atvs; do
                 _uativ="$(echo $_atvs | awk '{print $2}')"
@@ -1601,13 +1613,13 @@ fun_list_rev() {
             return 0
         } || {
             ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-                --text "YOU DO NOT HAVE RESELLERS"
+                --text "VC DOES NOT HAVE RESELLERS"
             return 0
         }
     elif [[ "$(grep -w ${callback_query_from_username} $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         _patch="/etc/bot/revenda"
         local msg1
-        msg1="=×=×=×=×=×=×=×=×=×=×=×=×=\n📃 LIST OF RESELLERS !\n=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg1="=×=×=×=×=×=×=×=×=×=×=×=×=\n📃 LIST OF SUB RESELLERS !\n=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         [[ "$(grep -wc "SUBREVENDA" $_patch/${callback_query_from_username}/${callback_query_from_username})" != '0' ]] && {
             while read _listsub; do
                 _usub="$(echo $_listsub | awk '{print $2}')"
@@ -1620,12 +1632,12 @@ fun_list_rev() {
             return 0
         } || {
             ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-                --text "YOU DO NOT HAVE RESELLERS"
+                --text "VC DOES NOT HAVE SUB RESELLERS"
             return 0
         }
     else
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-            --text "🚫 ACCESS DENIED 🚫"
+            --text "🚫 ACESSO NEGADO 🚫"
         return 0
     fi
 }
@@ -1638,7 +1650,7 @@ fun_susp_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🔒 SUSPEND DEALER 🔒\n\nInform the user [Ex: @crazy_vpn]:" \
+            --text "🔒 SUSPEND RESELLER 🔒\n\nInform his user [Ex: @danu_359]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1646,6 +1658,7 @@ fun_susp_rev() {
         return 0
     }
 }
+
 
 susp_rev() {
     _revs=$1
