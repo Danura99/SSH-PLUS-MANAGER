@@ -2283,27 +2283,27 @@ while :; do
                     #
                     # Adicionar, remover, limite, data, suspencao, relatorio
                     #
-                '👥 ADD DEALER 👥\n\nEnter the name:')
+                '👥 ADD RESELLER 👥\n\nEnter the name:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     echo "Nome: ${message_text[$id]}" >$CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text 'Inform the user [Ex: @crazy_vpn]:' \
+                        --text 'Inform his user [Ex: @danu_359]:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Inform the user [Ex: @crazy_vpn]:')
+                'Inform his user [Ex: @danu_359]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Error \n\n⚠️ Report the user [EX: @crazy_vpn]")" \
+                            --text "$(echo -e "❌ Error \n\n⚠️ Inform the user [EX: @danu_359]")" \
                             --parse_mode html
                         break
                     }
                     [[ -d /etc/bot/revenda/$_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ The Dealer ${message_text[$id]} and existe")" \
+                            --text "$(echo -e "❌ The Dealer ${message_text[$id]} already exists")" \
                             --parse_mode html
                         break
                     }
@@ -2317,7 +2317,7 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Error ! \n\n⚠️ use only numbers [EX: 10]")" \
+                            --text "$(echo -e "❌ Error ! \n\n⚠️ Use only numbers [EX: 10]")" \
                             --parse_mode html
                         break
                     }
@@ -2345,16 +2345,16 @@ while :; do
                     _clientrev=$(cat $CAD_ARQ)
                     criar_rev $CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "✅ successfully created. ✅\n\n$(<$CAD_ARQ)\n\nBOT: @${message_reply_to_message_from_username}" \
+                        --text "✅ Successfully created. ✅\n\n$(<$CAD_ARQ)\n\nBOT: @${message_reply_to_message_from_username}" \
                         --parse_mode html
                     ;;
                     # REMOVE REVENDEDOR
-                '🗑 REMOVE DEALER 🗑\n\nEnter his user[Ex: @crazy_vpn]:')
+                '🗑 REMOVE DEALER 🗑\n\nInform his user [Ex: @danu_359]:')
                     echo -e "${message_text[$id]}" >$CAD_ARQ
                     _Var=$(sed -n '1 p' $CAD_ARQ | awk -F '@' {'print $2'})
                     [[ -z $_Var ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ invalid User ")" \
+                            --text "$(echo -e "❌ Invalid user")" \
                             --parse_mode html
                         break
                     }
@@ -2362,7 +2362,7 @@ while :; do
                     break
                     ;;
                     # ALTERAR LIMITE
-                '♾ CHANGE RESALE LIMIT ♾\n\nInform his user [Ex: @crazy_vpn]:')
+                '♾ CHANGE RESALE LIMIT ♾\n\nInform his user [Ex: @danu_359]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     echo -e "Revendedor: ${message_text[$id]}" >$CAD_ARQ
@@ -2380,7 +2380,7 @@ while :; do
                                 --reply_markup "$(ShellBot.ForceReply)"
                         } || {
                             ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                                --text "$(echo -e "❌ Dealer ${message_text[$id]} does not exist")" \
+                                --text "$(echo -e "❌ Revendedor ${message_text[$id]} nao existe")" \
                                 --parse_mode html
                             break
                         }
@@ -2392,7 +2392,7 @@ while :; do
                                 --reply_markup "$(ShellBot.ForceReply)"
                         } || {
                             ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                                --text "$(echo -e "❌ Sub-dealer does not exist")" \
+                                --text "$(echo -e "❌ Sub-reseller does not exist")" \
                                 --parse_mode html
                             break
                         }
@@ -2403,7 +2403,7 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Error ! \n\nuse only numbers[EX: 1]")" \
+                            --text "$(echo -e "❌ Error ! \n\nUse only numbers [EX: 1]")" \
                             --parse_mode html
                         break
                     }
@@ -2420,7 +2420,7 @@ while :; do
                         [[ "$_limsomarev2" -ge "$_limTotal" ]] && {
                             echo $_limsomarev2
                             ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                                --text "$(echo -e "❌ you don't have enough limit")" \
+                                --text "$(echo -e "❌ You don't have enough limit")" \
                                 --parse_mode html
                             break
                         }
@@ -2435,11 +2435,11 @@ while :; do
                     echo -e "Limite: ${message_text[$id]}" >>$CAD_ARQ
                     lim_rev $CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "=×=×=×=×=×=×=×=×=×=×=×\n<b>✅ CHANGED RESALE LIMIT !</b> !\n=×=×=×=×=×=×=×=×=×=×=×\n\n$(<$CAD_ARQ)")" \
+                        --text "$(echo -e "=×=×=×=×=×=×=×=×=×=×=×\n<b>✅ RESALE LIMIT CHANGED !</b> !\n=×=×=×=×=×=×=×=×=×=×=×\n\n$(<$CAD_ARQ)")" \
                         --parse_mode html
                     # ALTERAR DATA
                     ;;
-                '📆 CHANGE RESALE DATE 📆\n\nInform his user [Ex: @crazy_vpn]:')
+                '📆 CHANGE RESALE DATE 📆\n\nInform his user [Ex: @danu_359]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
@@ -2457,7 +2457,7 @@ while :; do
                                 --reply_markup "$(ShellBot.ForceReply)"
                         } || {
                             ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                                --text "$(echo -e "❌ O Sub-reseller ${message_text[$id]} does not exist")" \
+                                --text "$(echo -e "❌ The Dealer ${message_text[$id]} does not exist")" \
                                 --parse_mode html
                             break
                         }
@@ -2466,11 +2466,11 @@ while :; do
                             [[ "$(grep -wc "$_VAR1" /etc/bot/revenda/${message_from_username}/${message_from_username})" != '0' ]] && {
                                 echo -e "Revendedor: ${message_text[$id]}" >$CAD_ARQ
                                 ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                                    --text 'Access days [Ex: 30]:' \
+                                    --text 'Dias de acesso [Ex: 30]:' \
                                     --reply_markup "$(ShellBot.ForceReply)"
                             } || {
                                 ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                                    --text "$(echo -e "❌ O Sub-reseller ${message_text[$id]} does not exist")" \
+                                    --text "$(echo -e "❌  The Dealer ${message_text[$id]} does not exist")" \
                                     --parse_mode html
                                 break
                             }
@@ -2482,7 +2482,7 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Erro ! \n\nuse only numbers [EX: 30]")" \
+                            --text "$(echo -e "❌ Error ! \n\nUse only numbers [EX: 30]")" \
                             --parse_mode html
                         break
                     }
@@ -2494,7 +2494,7 @@ while :; do
                         --parse_mode html
                     ;;
                     # SUSPENDER REVENDEDOR
-                '🔒 SUSPEND DEALER 🔒\n\nInform his user [Ex: @crazy_vpn]:')
+                '🔒 SUSPEND RESELLER 🔒\n\nInform his user [Ex: @danu_359]:')
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
