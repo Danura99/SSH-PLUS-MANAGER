@@ -306,6 +306,23 @@ fun_del_user() {
     }
 }
 
+alterar_senha() {
+    [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
+        ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
+            --text "⚠️ YOU ARE SUSPENDED! CONTACT THE ADMINISTRATOR"
+        return 0
+    }
+    [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
+        ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
+            --text "🔐Change Password 🔐\n\nUsername:" \
+            --reply_markup "$(ShellBot.ForceReply)"
+    } || {
+        ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
+            --text "🚫 ACCESS DENIED 🚫"
+        return 0
+    }
+}
+
 alterar_senha_user() {
     usuario=$1
     senha=$2
