@@ -1952,7 +1952,7 @@ while :; do
                         >$CAD_ARQ
                         break
                     }
-                    echo "Password: ${message_text[$id]}" >>$CAD_ARQ
+                    echo "Senha: ${message_text[$id]}" >>$CAD_ARQ
                     # Próximo campo.
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
                         --text 'Limit:' \
@@ -1982,7 +1982,7 @@ while :; do
                             break
                         }
                     }
-                    echo "Limit: ${message_text[$id]}" >>$CAD_ARQ
+                    echo "Limite: ${message_text[$id]}" >>$CAD_ARQ
                     # Próximo campo.
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
                         --text 'Validity in days: ' \
