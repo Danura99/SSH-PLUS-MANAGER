@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo -e "\033[1;32mWANT TO UNINSTALL SSH-PLUS-MANAGER\033[1;33m"
-echo -e "\033[1;32m😍🙏WELLCOME🙏😍\033[1;33m"
+echo -e "\033[1;32m😍🙏WELLCOME🙏😍 (නැවත එන්න)\033[1;33m"
 read -p "Do you want to remove? [s/n] " resp
 if [[ "$resp" = s || "$resp" = S ]];then
     apt-get purge screen -y > /dev/null 2>&1
