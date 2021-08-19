@@ -2079,7 +2079,7 @@ while :; do
                         --text "✅ *Successfully removed.* 🚮" \
                         --parse_mode markdown
                     ;;
-                '🔐 Change Password 🔐\n\nUsername:')
+                '🔐 Alterar Senha 🔐\n\nNome do usuario:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     fun_verif_user ${message_text[$id]}
@@ -2103,7 +2103,7 @@ while :; do
                     alterar_senha_user $(cat /tmp/name-s) ${message_text[$id]}
                     [[ "$_erro" == '1' ]] && break
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "=×=×=×=×=×=×=×=×=×=×=×\n<b>✅ PASSWORD CHANGED !</b> !\n=×=×=×=×=×=×=×=×=×=×=×\n\n<b>Username:</b> $(cat /tmp/name-s)\n<b>New Password:</b> ${message_text[$id]}")" \
+                        --text "$(echo -e "=×=×=×=×=×=×=×=×=×=×=×\n<b>✅ SENHA ALTERADA !</b> !\n=×=×=×=×=×=×=×=×=×=×=×\n\n<b>Usuario:</b> $(cat /tmp/name-s)\n<b>Nova senha:</b> ${message_text[$id]}")" \
                         --parse_mode html
                     rm /tmp/name-s >/dev/null 2>&1
                     ;;
