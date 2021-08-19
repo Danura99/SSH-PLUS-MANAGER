@@ -344,7 +344,7 @@ alterar_limite() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "👥 Change Threshold 👥\n\nUsername:" \
+            --text "👥 Change Limit 👥\n\nUsername:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -2079,7 +2079,7 @@ while :; do
                         --text "✅ *Successfully removed.* 🚮" \
                         --parse_mode markdown
                     ;;
-                '🔐 Alterar Senha 🔐\n\nNome do usuario:')
+                '🔐 Change Password 🔐\n\nUsername:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     fun_verif_user ${message_text[$id]}
@@ -2087,27 +2087,27 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     echo "${message_text[$id]}" >/tmp/name-s
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text 'Nova senha:' \
+                        --text 'New Password:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Nova senha:')
+                'New Password:')
                     sizepass=$(echo -e ${#message_text[$id]})
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ "$sizepass" -lt '4' ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Erro !\n\n⚠️ Use mínimo 4 caracteres [EX: 1234]")" \
+                            --text "$(echo -e "❌ Error !\n\n⚠️ Use at least 4 characters [EX: 1234]")" \
                             --parse_mode html
                         break
                     }
                     alterar_senha_user $(cat /tmp/name-s) ${message_text[$id]}
                     [[ "$_erro" == '1' ]] && break
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "=×=×=×=×=×=×=×=×=×=×=×\n<b>✅ SENHA ALTERADA !</b> !\n=×=×=×=×=×=×=×=×=×=×=×\n\n<b>Usuario:</b> $(cat /tmp/name-s)\n<b>Nova senha:</b> ${message_text[$id]}")" \
+                        --text "$(echo -e "=×=×=×=×=×=×=×=×=×=×=×\n<b>✅ PASSWORD CHANGED !</b> !\n=×=×=×=×=×=×=×=×=×=×=×\n\n<b>User:</b> $(cat /tmp/name-s)\n<b>New Password:</b> ${message_text[$id]}")" \
                         --parse_mode html
                     rm /tmp/name-s >/dev/null 2>&1
                     ;;
-                '👥 Change Threshold 👥\n\nUsername:')
+                '👥 Change Limit 👥\n\nUsername:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     echo $_erro segundo
