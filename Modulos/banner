@@ -13,6 +13,7 @@ chk=$(cat /etc/ssh/sshd_config | grep Banner)
 }
 echo -e "\E[44;1;37m             BANNER             \E[0m"
 echo ""
+echo -e "\033[1;31m[\033[1;36m1\033[1;31m]\033[1;37m • \033[1;33mDO YOU WANT TO EDIT BANNER MANUALY USING HTML USE THIS CODE (nano /etc/bannerssh)"
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m]\033[1;37m • \033[1;33mADD BANNER"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m]\033[1;37m • \033[1;33mREMOVE BANNER"
 echo -e "\033[1;31m[\033[1;36m3\033[1;31m]\033[1;37m • \033[1;33mCOME BACK"

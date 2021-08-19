@@ -99,7 +99,7 @@ echo ""
 echo ""
 echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mUPDATING SYSTEM \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
 echo ""
-echo -e "    \033[1;33mUPDATES USING TO TAKE A LITTLE TIME!\033[0m"
+echo -e "    \033[1;33mUPDATES USING TO TAKE A LITTLE TIME! (යාවත්කාලීන කිරීම් සුළු වේලාවක් ගැනීමට භාවිතා කරයි!)\033[0m"
 echo ""
 fun_attlist () {
     apt-get update -y
