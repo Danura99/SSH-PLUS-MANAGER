@@ -5,7 +5,7 @@ then
 	echo ""
 	echo "As configurações de rede TCP Tweaker já foram adicionadas no sistema!"
 	echo ""
-	read -p "Deseja remover as configurações do TCP Tweaker? [s/n]: " -e -i n resposta0
+	read -p "Want to remove TCP Tweaker settings? [s/n]: " -e -i n resposta0
 	if [[ "$resposta0" = 's' ]]; then
 		grep -v "^#PH56
 net.ipv4.tcp_window_scaling = 1

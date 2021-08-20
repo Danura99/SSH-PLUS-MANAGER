@@ -38,7 +38,7 @@ fun_spn1 () {
 	helice
 	echo -e "\e[1DOk"
 }
-read -p "$(echo -e "\033[1;32mDESEJA REMOVER REGRAS FIREWALL? \033[1;33m[s/n]:\033[1;37m") " -e -i n resp
+read -p "$(echo -e "\033[1;32mWISH TO REMOVE FIREWALL RULES? \033[1;33m[s/n]:\033[1;37m") " -e -i n resp
 if [[ "$resp" = 's' ]]; then
 	echo ""	
 	fun_spn1

@@ -59,7 +59,7 @@ fi
 #REMOVE
 echo -e "\033[1;33mAS CONFIGURACOES DE REDE TCP JA FORAM ADICIONADAS NO SISTEMA!"
 echo ""
-read -p "$(echo -e "\033[1;32mDESEJA REMOVER AS CONFIGURACIONES TCP \033[1;31m? \033[1;33m[s/n]:\033[1;37m ")" -e -i n res_posta
+read -p "$(echo -e "\033[1;32mDO YOU WANT TO REMOVE THE TCP SETTINGS \033[1;31m? \033[1;33m[s/n]:\033[1;37m ")" -e -i n res_posta
 echo -e "\033[1;37m"
 if [[ "$res_posta" = 's' ]]; then
 unset res_posta

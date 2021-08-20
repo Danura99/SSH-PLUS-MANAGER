@@ -69,7 +69,7 @@ backbot=$1
 	echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mRESTAURAR BACKUP"
 	echo -e "\033[1;31m[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mVOLTAR\033[1;37m"
 	echo ""
-	echo -ne "\033[1;32mOQUE DESEJA FAZER\033[1;31m ?\033[1;37m : "; read opcao
+	echo -ne "\033[1;32mWHAT DO YOU WANT TO DO\033[1;31m ?\033[1;37m : "; read opcao
 	if [[ "$opcao" = '1' ]]; then
 		if [ -f "/root/usuarios.db" ]
 		then

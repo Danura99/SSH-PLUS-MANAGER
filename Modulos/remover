@@ -7,6 +7,8 @@ user="$1"
 cd /etc/openvpn/easy-rsa/
 ./easyrsa --batch revoke $user
 ./easyrsa gen-crl
+sed -i 's/Banner \/etc\/banner/#Banner none/' /etc/ssh/sshd_config
+rm -f /etc/banner
 rm -rf pki/reqs/$user.req
 rm -rf pki/private/$user.key
 rm -rf pki/issued/$user.crt
