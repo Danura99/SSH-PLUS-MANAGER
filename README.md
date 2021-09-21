@@ -22,11 +22,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 
 # 🔥😍 Danura Santhush 🇱🇰 😍🔥
 
--------------------------------------------------------------------------------
-
 <img align="left" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/images/SSH-PLUS-MANAGER.png" />
-
-
 
 **Manager Script**
 
@@ -37,12 +33,8 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 [![Contributors](https://img.shields.io/github/contributors/TeamUltroid/Ultroid?style=flat-square&color=green)]()        
 [![License](https://img.shields.io/badge/License-GPL-blue)](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/LICENSE)
 
-
-
- SSH-PLUS-MANAGER is a copy with the appropriate set of features and tools
-                 Focus on usage and make Linux clients extremely easy to handle
-                 VPN has a pleasant interface that provides detailed information about the machine               
-                 And users ...
+ SSH-PLUS-MANAGER is a copy with the appropriate set of features and tools Focus on usage and make Linux clients extremely easy to handle
+                 VPN has a pleasant interface that provides detailed information about the machine And users ...
                  
 ## :heavy_exclamation_mark: Requerimientos
 
