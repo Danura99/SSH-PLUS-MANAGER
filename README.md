@@ -35,7 +35,15 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 
  SSH-PLUS-MANAGER is a copy with the appropriate set of features and tools Focus on usage and make Linux clients extremely easy to handle
                  VPN has a pleasant interface that provides detailed information about the machine And users ...
-                 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 ## :heavy_exclamation_mark: Requerimientos
 
 * Linux (Ubuntu or Debian) based operating system
