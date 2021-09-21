@@ -24,20 +24,10 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 
 -------------------------------------------------------------------------------
 
-<img align="left" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/SSH-PLUS-MANAGER.png" />
-<img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/telegram_BOT.png" />
+<img align="left" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/images/SSH-PLUS-MANAGER.png" />
 
 
 
-
- -------------------------------------------------------------------------------
- 
- 
- 
-<img align="right" src="https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/BANER.png" width='150'/>
-  
-![logo](https://github.com/Danura99/SSH-PLUS-MANAGER/blob/master/image/CREATE-USER.png)                
-         
 **Manager Script**
 
 [![Size](https://img.shields.io/github/repo-size/sbatrow/DARKSSH-MANAGER?style=flat-square&color=green)](https://github.com/Danura99/SSH-PLUS-MANAGER)   
@@ -55,8 +45,6 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
                  And users ...
                  
 ## :heavy_exclamation_mark: Requerimientos
-
-
 
 * Linux (Ubuntu or Debian) based operating system
 * Ubuntu 14.04 Server x86_64 / Ubuntu 16.04 Server x86_64 / Ubuntu 18.04 Server x86_64 / Ubuntu 20.04 Server x86_64
