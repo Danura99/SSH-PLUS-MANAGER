@@ -52,11 +52,11 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
 
 
 
-# 😍 Credits
+# 🎮 Credits 🎮
 
 1. @crazy_vpn - Developer of SSHPlus Manager
 
-# 🏃‍contact me
+# 💢 contact me 💢
 
 3. [🔥😍 Danura Santhush 🇱🇰 😍🔥] 👉 (https://t.me/danu_359) 
 
