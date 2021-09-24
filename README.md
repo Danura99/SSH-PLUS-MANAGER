@@ -44,7 +44,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/Da
     <br/>
     <br/>
     <br/>
-## :heavy_exclamation_mark: Requerimientos
+## :heavy_exclamation_mark: Requirement
 
 * Linux (Ubuntu or Debian) based operating system
 * Ubuntu 14.04 Server x86_64 / Ubuntu 16.04 Server x86_64 / Ubuntu 18.04 Server x86_64 / Ubuntu 20.04 Server x86_64
